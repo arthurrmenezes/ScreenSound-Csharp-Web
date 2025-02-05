@@ -4,10 +4,15 @@ using ScreenSound.Modelos;
 
 try
 {
-    var artistaDAL = new ArtistaDAL();
-    artistaDAL.Listar();
-    Console.WriteLine("Asdad");
+    var context = new ScreenSoundContext();
+    var artistaDAL = new ArtistaDAL(context);
 
+    
+
+    foreach (var artista in artistaDAL.Listar())
+    {
+        Console.WriteLine(artista);
+    }
 }
 catch (Exception exception)
 {
