@@ -1,6 +1,7 @@
 ﻿using ScreenSound.Modelos;
 
 namespace ScreenSound.Banco;
+
 internal class ArtistaDAL
 {
     private readonly ScreenSoundContext context;
