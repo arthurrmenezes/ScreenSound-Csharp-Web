@@ -5,7 +5,7 @@ using ScreenSound.Modelos;
 namespace ScreenSound.Banco;
 internal class ScreenSoundContext : DbContext
 {
-    public DbSet<Artista> Artistas;
+    public DbSet<Artista> Artistas { get; set; }
 
     private string connectionString = "Data Source=DESKTOP-SD3LB7D;" +
         "Initial Catalog=ScreenSound;" +

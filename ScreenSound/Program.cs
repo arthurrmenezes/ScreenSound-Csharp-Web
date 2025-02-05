@@ -5,6 +5,8 @@ using ScreenSound.Modelos;
 try
 {
     var artistaDAL = new ArtistaDAL();
+    artistaDAL.Listar();
+    Console.WriteLine("Asdad");
 
 }
 catch (Exception exception)
