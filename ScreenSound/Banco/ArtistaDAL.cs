@@ -1,5 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-using ScreenSound.Modelos;
+﻿using ScreenSound.Modelos;
 
 namespace ScreenSound.Banco;
 internal class ArtistaDAL
@@ -32,5 +31,10 @@ internal class ArtistaDAL
     {
         context.Artistas.Remove(artista);
         context.SaveChanges();
+    }
+
+    public Artista? RecuperarPeloNome(string nomeDoArtista)
+    {
+        return context.Artistas.FirstOrDefault(a => a.Nome.Equals(nomeDoArtista));
     }
 }
