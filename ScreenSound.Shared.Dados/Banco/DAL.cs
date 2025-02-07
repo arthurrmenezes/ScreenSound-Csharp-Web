@@ -1,8 +1,8 @@
 ﻿namespace ScreenSound.Banco;
 
-internal class DAL<T> where T : class
+public class DAL<T> where T : class
 {
-    protected readonly ScreenSoundContext context;
+    private readonly ScreenSoundContext context;
 
     public DAL(ScreenSoundContext context)
     {
@@ -13,6 +13,7 @@ internal class DAL<T> where T : class
     {
         return context.Set<T>().ToList();
     }
+
 
     public void Adicionar(T objeto)
     {

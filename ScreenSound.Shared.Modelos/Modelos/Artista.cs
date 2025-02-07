@@ -5,16 +5,18 @@ public class Artista
     public virtual ICollection<Musica> Musicas { get; set; } = new List<Musica>();
 
     public string Nome { get; set; }
-    public string FotoPerfil { get; set; }
+    public string? FotoPerfil { get; set; }
     public string Bio { get; set; }
     public int Id { get; set; }
 
-    public Artista(string nome, string bio)
+    public Artista(string nome, string bio, string fotoPerfil = "https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_1280.png")
     {
         Nome = nome;
         Bio = bio;
-        FotoPerfil = "https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_1280.png";
+        FotoPerfil = fotoPerfil;
     }
+
+    public Artista() { }
 
     public void AdicionarMusica(Musica musica)
     {
