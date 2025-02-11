@@ -1,4 +1,6 @@
-﻿namespace ScreenSound.Modelos;
+﻿using ScreenSound.Shared.Modelos.Modelos;
+
+namespace ScreenSound.Modelos;
 
 public class Musica
 {
@@ -6,6 +8,7 @@ public class Musica
     public virtual int Id { get; set; }
     public virtual int? AnoLancamento { get; set; }
     public virtual Artista? Artista { get; set; }
+    public virtual ICollection<Genero> Generos { get; set; }
 
     public Musica(string nome)
     {
